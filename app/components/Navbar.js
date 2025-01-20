@@ -1,7 +1,17 @@
+"use client"
 import React from "react";
 import Link from "next/link";
+import { UserButton, useSession, useUser } from "@clerk/nextjs";
+
 
 const Navbar = () => {
+  const { isLoaded, session, isSignedIn } = useSession();
+  const { user } = useUser();
+
+  if (!isLoaded) {
+    return <p>Loading...</p>;
+  }
+
   return (
     <nav className="lexend-deca-text flex justify-between items-center max-h-20">
       <div className="first mx-10 text-lg hover:underline-offset-0">
@@ -82,13 +92,26 @@ const Navbar = () => {
         </div>
       </div>
       <div className="third mr-10 flex gap-6">
-        <Link href={"/Login"}>
-        <button className="hover:bg-[#f3f3f1] hover:ease-out duration-300 py-3 rounded-3xl px-4">
-          Login
-        </button>
-        </Link>
-        <button className="bg-[#ffdd00] py-3 rounded-3xl px-4">Sign Up</button>
-      </div>
+      {isSignedIn ? (
+        // User is signed in: Display a welcome message or other signed-in content
+        <>
+          <UserButton/>
+          <p>{ user?.firstName }</p>
+        </>
+      ) : (
+        // User is not signed in: Show Login and Sign Up buttons
+        <>
+          <Link href="/CreateAccount">
+            <button className="hover:bg-[#f3f3f1] hover:ease-out duration-300 py-3 rounded-3xl px-4">
+              Login
+            </button>
+          </Link>
+          <Link href="/SignUp">
+            <button className="bg-[#ffdd00] py-3 rounded-3xl px-4">Sign Up</button>
+          </Link>
+        </>
+      )}
+    </div>
     </nav>
   );
 };

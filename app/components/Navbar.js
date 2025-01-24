@@ -106,7 +106,7 @@ const Navbar = () => {
               Login
             </button>
           </Link>
-          <Link href="/SignUp">
+          <Link href="/CreateAccount">
             <button className="bg-[#ffdd00] py-3 rounded-3xl px-4">Sign Up</button>
           </Link>
         </>

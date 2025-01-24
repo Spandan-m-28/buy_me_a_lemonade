@@ -1,8 +1,27 @@
+"use client"
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
+import { useAuth } from "@clerk/nextjs";
+import { useEffect } from "react";
 
 export default function Home() {
 
+  const { isSignedIn, userId } = useAuth();
+
+  useEffect(() => {
+    if (isSignedIn && userId) {
+      fetch("/api/db/login", {
+        method: "POST",
+      }).then((response) => {
+        if (!response.ok) {
+          console.error("Failed to sync user with MongoDB");
+        }
+      }).catch((error) => {
+        console.error("Error during API call:", error);
+      });
+    }
+  }, [isSignedIn, userId]);
+  
   return (
     <>
       <Navbar />

@@ -1,4 +1,5 @@
 import React from "react";
+import Link from "next/link";
 
 const Footer = () => {
   return (
@@ -10,7 +11,8 @@ const Footer = () => {
           height="526"
           viewBox="0 0 884 1279"
           fill="none"
-          xmlns="http://www.w3.org/2000/svg">
+          xmlns="http://www.w3.org/2000/svg"
+        >
           <path
             d="M791.109 297.518L790.231 297.002L788.201 296.383C789.018 297.072 790.04 297.472 791.109 297.518V297.518Z"
             fill="#0D0C22"
@@ -74,19 +76,24 @@ const Footer = () => {
           <div className="text-xl font-medium">Contact Us</div>
           <div className="flex justify-center items-center gap-10">
             <span className="cursor-pointer">
-              <lord-icon
-                src="https://cdn.lordicon.com/yizwahhw.json"
-                trigger="hover"
-                stroke="bold"
-                style={{ width: "35px", height: "35px" }}></lord-icon>
+              <Link href="https://x.com/spandan_m_28">
+                <lord-icon
+                  src="https://cdn.lordicon.com/yizwahhw.json"
+                  trigger="hover"
+                  stroke="bold"
+                  style={{ width: "35px", height: "35px" }}
+                ></lord-icon>
+              </Link>
             </span>
             <span className="cursor-pointer">
+              <Link href=""></Link>
               <lord-icon
                 src="https://cdn.lordicon.com/tgyvxauj.json"
                 trigger="hover"
                 stroke="bold"
                 colors="primary:#121331,secondary:#000000"
-                style={{ width: "40px", height: "40px" }}></lord-icon>
+                style={{ width: "40px", height: "40px" }}
+              ></lord-icon>
             </span>
             <span className="cursor-pointer">
               <lord-icon
@@ -94,18 +101,22 @@ const Footer = () => {
                 trigger="hover"
                 stroke="bold"
                 colors="primary:#121331,secondary:#000000"
-                style={{ width: "50px", height: "50px" }}></lord-icon>
+                style={{ width: "50px", height: "50px" }}
+              ></lord-icon>
             </span>
             <span className="cursor-pointer">
-              <lottie-player
-                src="https://lottie.host/6c3337be-51f2-4230-9211-86f2f358b058/MOPSEjTG93.json"
-                background="##FFFFFF"
-                speed="1"
-                style={{ width: "45px", height: "45px" }}
-                hover
-                autoplay
-                direction="1"
-                mode="normal"></lottie-player>
+              <Link href="https://github.com/Spandan-m-28">
+                <lottie-player
+                  src="https://lottie.host/6c3337be-51f2-4230-9211-86f2f358b058/MOPSEjTG93.json"
+                  background="##FFFFFF"
+                  speed="1"
+                  style={{ width: "45px", height: "45px" }}
+                  hover
+                  autoplay
+                  direction="1"
+                  mode="normal"
+                ></lottie-player>
+              </Link>
             </span>
           </div>
         </div>

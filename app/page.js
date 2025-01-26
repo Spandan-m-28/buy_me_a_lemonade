@@ -1,27 +1,29 @@
-"use client"
+"use client";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import { useAuth } from "@clerk/nextjs";
 import { useEffect } from "react";
+import Link from "next/link";
 
 export default function Home() {
-
   const { isSignedIn, userId } = useAuth();
 
   useEffect(() => {
     if (isSignedIn && userId) {
       fetch("/api/db/login", {
         method: "POST",
-      }).then((response) => {
-        if (!response.ok) {
-          console.error("Failed to sync user with MongoDB");
-        }
-      }).catch((error) => {
-        console.error("Error during API call:", error);
-      });
+      })
+        .then((response) => {
+          if (!response.ok) {
+            console.error("Failed to sync user with MongoDB");
+          }
+        })
+        .catch((error) => {
+          console.error("Error during API call:", error);
+        });
     }
   }, [isSignedIn, userId]);
-  
+
   return (
     <>
       <Navbar />
@@ -35,9 +37,11 @@ export default function Home() {
             "Start your own landing page and and raise funds for free"
           </h3>
           <div className="flex flex-col justify-center items-center">
-            <button className="bg-[#ffdd00] rounded-full text-xl py-5 px-7 mt-10 font-medium hover:scale-110 hover:ease-out duration-300">
-              Start your own Page
-            </button>
+            <Link href="/CreateAccount">
+              <button className="bg-[#ffdd00] rounded-full text-xl py-5 px-7 mt-10 font-medium hover:scale-110 hover:ease-out duration-300">
+                Start your own Page
+              </button>
+            </Link>
             <p className="mt-4 text-lg">
               It's free and takes less than a minute!
             </p>
@@ -59,7 +63,8 @@ export default function Home() {
                   <lord-icon
                     src="https://cdn.lordicon.com/hmzvkifi.json"
                     trigger="hover"
-                    style={{ width: "60px", height: "60px" }}></lord-icon>
+                    style={{ width: "60px", height: "60px" }}
+                  ></lord-icon>
                 </span>
                 <p>
                   We don't call them "customers" or transactions. They are your
@@ -71,7 +76,8 @@ export default function Home() {
                   <lord-icon
                     src="https://cdn.lordicon.com/hmzvkifi.json"
                     trigger="hover"
-                    style={{ width: "60px", height: "60px" }}></lord-icon>
+                    style={{ width: "60px", height: "60px" }}
+                  ></lord-icon>
                 </span>
                 <p>
                   You have 100% ownership of your supporters. We never email
@@ -83,7 +89,8 @@ export default function Home() {
                   <lord-icon
                     src="https://cdn.lordicon.com/hmzvkifi.json"
                     trigger="hover"
-                    style={{ width: "60px", height: "60px" }}></lord-icon>
+                    style={{ width: "60px", height: "60px" }}
+                  ></lord-icon>
                 </span>
                 <p>
                   You get to talk to a human for help, or if you just like some
@@ -95,7 +102,8 @@ export default function Home() {
                   <lord-icon
                     src="https://cdn.lordicon.com/hmzvkifi.json"
                     trigger="hover"
-                    style={{ width: "60px", height: "60px" }}></lord-icon>
+                    style={{ width: "60px", height: "60px" }}
+                  ></lord-icon>
                 </span>
                 <p>
                   You get paid instantly to your bank account. No more 30-day
@@ -106,7 +114,7 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <Footer/>
+      <Footer />
     </>
   );
 }

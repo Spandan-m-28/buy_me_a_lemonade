@@ -147,8 +147,8 @@ const page = ({ params: paramsPromise }) => {
         <div className="mt-24 min-w-[100%] mx-auto">
           <p className="text-center text-2xl">{params.username}</p>
         </div>
-        <div className="w-[90%] md:w-[70%] mx-auto flex flex-wrap gap-4 mt-10">
-          <div className=" mx-auto leaderboard w-[90%] md:w-[50%] bg-[#faf8f0] rounded-3xl drop-shadow-2xl p-3">
+        <div className="w-[90%] md:w-[70%] mx-auto flex flex-wrap  gap-4 mt-10">
+          <div className=" mx-auto leaderboard w-[90%] md:w-[49%] bg-[#faf8f0] rounded-3xl drop-shadow-2xl p-3">
             <div className="text-2xl ml-6 mt-5">Your Suppoters</div>
             <div className="flex flex-col overflow-scroll justify-center items-center ">
               {payments.map((payment) => {
@@ -165,7 +165,7 @@ const page = ({ params: paramsPromise }) => {
               })}
             </div>
           </div>
-          <div className="payment rounded-3xl w-[90%] mx-auto md:w-[50%] bg-[#faf8f0] drop-shadow-2xl p-3">
+          <div className="payment rounded-3xl w-[90%] mx-auto md:w-[49%] bg-[#faf8f0] drop-shadow-2xl p-3">
             <div className="text-center mt-3 text-xl mb-3">Support Me</div>
             <div>
               <div className="flex flex-col gap-4">

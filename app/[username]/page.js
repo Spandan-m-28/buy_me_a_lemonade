@@ -62,7 +62,7 @@ const page = ({ params: paramsPromise }) => {
       }
     };
     fetchPayments();
-  }, [payments]);
+  }, []);
 
   const handlechange = (e) => {
     console.log(e.target.value);
@@ -134,7 +134,7 @@ const page = ({ params: paramsPromise }) => {
             src={user.coverPic}
             alt=""
           />
-          <div className="absolute -bottom-20 right-[33%] md:right-[46%] border-white overflow-hidden border-2 rounded-full size-36">
+          <div className="absolute -bottom-20 right-[30%] md:right-[46%] border-white overflow-hidden border-2 rounded-full size-36">
             <img
               className="rounded-full object-cover size-36"
               width={400}
@@ -147,25 +147,25 @@ const page = ({ params: paramsPromise }) => {
         <div className="mt-24 min-w-[100%] mx-auto">
           <p className="text-center text-2xl">{params.username}</p>
         </div>
-        <div className="w-[70%] mx-auto flex gap-4 mt-10">
-          <div className="leaderboard w-[50%] bg-[#faf8f0] rounded-3xl drop-shadow-2xl p-3">
+        <div className="w-[90%] md:w-[70%] mx-auto flex flex-wrap gap-4 mt-10">
+          <div className=" mx-auto leaderboard w-[90%] md:w-[50%] bg-[#faf8f0] rounded-3xl drop-shadow-2xl p-3">
             <div className="text-2xl ml-6 mt-5">Your Suppoters</div>
             <div className="flex flex-col overflow-scroll justify-center items-center ">
               {payments.map((payment) => {
                 return (<div key={payment.order_id} className="suppoter cursor-pointer w-96 bg-white rounded-lg flex justify-center gap-10 items-center mt-5">
-                  <span>
+                  {/* <span>
                     <lord-icon
                       src={"https://cdn.lordicon.com/kdduutaw.json"}
                       trigger="hover"
                       style={{ width: "50px", height: "50px" }}
                     ></lord-icon>
-                  </span>
+                  </span> */}
                   <div className="text-lg">{`${payment.name} Gave you ${payment.amount}`}</div>
                 </div>)
               })}
             </div>
           </div>
-          <div className="payment rounded-3xl w-[50%] bg-[#faf8f0] drop-shadow-2xl p-3">
+          <div className="payment rounded-3xl w-[90%] mx-auto md:w-[50%] bg-[#faf8f0] drop-shadow-2xl p-3">
             <div className="text-center mt-3 text-xl mb-3">Support Me</div>
             <div>
               <div className="flex flex-col gap-4">
@@ -173,7 +173,7 @@ const page = ({ params: paramsPromise }) => {
                   onChange={handlechange}
                   value={paymentform.name}
                   name="name"
-                  className="w-80 h-10 mx-auto mt-3 rounded-lg px-4 cursor-pointer"
+                  className="md:w-80 h-10 mx-auto mt-3 rounded-lg px-4 cursor-pointer"
                   type="text"
                   placeholder="Enter name"
                 />
@@ -181,7 +181,7 @@ const page = ({ params: paramsPromise }) => {
                   onChange={handlechange}
                   value={paymentform.message}
                   name="message"
-                  className="w-80 h-10 mx-auto mt-3 rounded-lg px-4 cursor-pointer"
+                  className="md:w-80 h-10 mx-auto mt-3 rounded-lg px-4 cursor-pointer"
                   type="text"
                   placeholder="Enter message"
                 />
@@ -189,7 +189,7 @@ const page = ({ params: paramsPromise }) => {
                   onChange={handlechange}
                   value={paymentform.amount}
                   name="amount"
-                  className="w-80 h-10 mx-auto mt-3 rounded-lg px-4 cursor-pointer"
+                  className="md:w-80 h-10 mx-auto mt-3 rounded-lg px-4 cursor-pointer"
                   type="text"
                   placeholder="Enter amount"
                 />
@@ -209,7 +209,7 @@ const page = ({ params: paramsPromise }) => {
                   onClick={() => {
                     pay(10);
                   }}
-                  className="bg-[#ffdd00] hover:scale-105 ease-out duration-300 w-[30%] mx-auto p-3 rounded-lg active:cursor-wait"
+                  className="bg-[#ffdd00] hover:scale-105 ease-out duration-300 w-[50%] md:w-[30%] mx-auto p-3 rounded-lg active:cursor-wait"
                 >
                   Pay ₹10
                 </button>
@@ -217,7 +217,7 @@ const page = ({ params: paramsPromise }) => {
                   onClick={() => {
                     pay(20);
                   }}
-                  className="bg-[#ffdd00] hover:scale-105 ease-out duration-300 w-[30%] mx-auto p-3 rounded-lg active:cursor-wait"
+                  className="bg-[#ffdd00] hover:scale-105 ease-out duration-300 w-[50%] md:w-[30%] mx-auto p-3 rounded-lg active:cursor-wait"
                 >
                   Pay ₹20
                 </button>
@@ -225,7 +225,7 @@ const page = ({ params: paramsPromise }) => {
                   onClick={() => {
                     pay(30);
                   }}
-                  className="bg-[#ffdd00] hover:scale-105 ease-out duration-300 w-[30%] mx-auto p-3 rounded-lg active:cursor-wait"
+                  className="bg-[#ffdd00] hover:scale-105 ease-out duration-300 w-[50%] md:w-[30%] mx-auto p-3 rounded-lg active:cursor-wait"
                 >
                   Pay ₹30
                 </button>

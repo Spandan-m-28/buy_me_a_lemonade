@@ -7,8 +7,8 @@ const AboutUs = () => {
     <div>
       <Navbar />
       <div className="w-3/4 mx-auto mb-8">
-        <h1 className="mt-4 text-3xl font-medium">About Get Me a Lemonade</h1>
-        <div className="text-xl">
+        <h1 className="mt-4 text-2xl md:text-3xl font-medium">About Get Me a Lemonade</h1>
+        <div className=" md:text-2xl">
           <p className="mt-3">
             Get Me a Lemonade is a crowdfunding platform designed for creators
             to fund their projects/contents with the support of their fans.
@@ -21,6 +21,7 @@ const AboutUs = () => {
           <h2 className="text-2xl font-medium mb-4">How It Works</h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
             <div className="flex items-center mb-6 gap-3">
+              <span>
               <lottie-player
                 src="https://lottie.host/d66a7a1e-5d02-41d3-a082-127f7c8dd1b0/WHyWnv9iEM.json"
                 background="##FFFFFF"
@@ -30,6 +31,7 @@ const AboutUs = () => {
                 autoplay
                 direction="1"
                 mode="normal"></lottie-player>
+              </span>
               <div>
                 <h3 className="text-xl font-semibold mb-2">
                   Fans Want to Collaborate
@@ -40,16 +42,18 @@ const AboutUs = () => {
                 </p>
               </div>
             </div>
-            <div className="flex items-center mb-6 gap-3">
+            <div className="flex items-center mb-6 gap-2">
+              <span>
               <lottie-player
                 src="https://lottie.host/ddaa195d-77e3-44f1-9736-e1228d8e734a/GZzm8x0j4N.json"
                 background="##FFFFFF"
                 speed="1"
-                style={{ width: "90px", height: "90px" }}
+                style={{ width: "60px", height: "60px" }}
                 loop
                 autoplay
                 direction="1"
                 mode="normal"></lottie-player>
+              </span>
               <div>
                 <h3 className="text-xl font-semibold mb-2">
                   Support Through Lemonade
@@ -64,7 +68,7 @@ const AboutUs = () => {
         </div>
 
         <div className="flex flex-wrap gap-5 justify-center items-center mt-14">
-          <div className="w-[37%] bg-[#faf8f0] rounded-xl py-4 px-6 hover:scale-105 duration-700 ease-out ">
+          <div className="md:w-[37%] bg-[#faf8f0] rounded-xl py-4 px-6 hover:scale-105 duration-700 ease-out ">
             <h2 className="text-2xl font-semibold mb-4">
               Benefits for Creators
             </h2>
@@ -82,7 +86,7 @@ const AboutUs = () => {
             </ul>
           </div>
 
-          <div className="w-[37%] bg-[#faf8f0] rounded-xl py-4 px-6 hover:scale-105 duration-300 ease-out">
+          <div className="md:w-[37%] bg-[#faf8f0] rounded-xl py-4 px-6 hover:scale-105 duration-300 ease-out">
             <h2 className="text-2xl font-semibold mb-4">Benefits for Fans</h2>
             <ul className="list-disc pl-6 mb-6">
               <li className="mb-2">
@@ -98,7 +102,7 @@ const AboutUs = () => {
             </ul>
           </div>
 
-          <div className="w-[37%] bg-[#faf8f0] rounded-xl py-4 px-6 hover:scale-105 duration-300 ease-out">
+          <div className="md:w-[37%] bg-[#faf8f0] rounded-xl py-4 px-6 hover:scale-105 duration-300 ease-out">
             {/* Additional sections */}
             <h2 className="text-2xl font-semibold mb-4">
               Benefits of Collaboration
@@ -118,7 +122,7 @@ const AboutUs = () => {
             </ul>
           </div>
 
-          <div className="w-[37%] bg-[#faf8f0] rounded-xl py-4 px-6 hover:scale-105 duration-300 ease-out">
+          <div className="md:w-[37%] bg-[#faf8f0] rounded-xl py-4 px-6 hover:scale-105 duration-300 ease-out">
             <h2 className="text-2xl font-semibold mb-4">
               Community Engagement
             </h2>
@@ -137,7 +141,7 @@ const AboutUs = () => {
             </ul>
           </div>
 
-          <div className="w-[37%] bg-[#faf8f0] rounded-xl py-4 px-6 hover:scale-105 duration-300 ease-out">
+          <div className="md:w-[37%] bg-[#faf8f0] rounded-xl py-4 px-6 hover:scale-105 duration-300 ease-out">
             <h2 className="text-2xl font-semibold mb-4">Access to Resources</h2>
             <ul className="list-disc pl-6 mb-6">
               <li className="mb-2">
@@ -153,7 +157,7 @@ const AboutUs = () => {
             </ul>
           </div>
 
-          <div className="w-[37%] bg-[#faf8f0] rounded-xl py-4 px-6 hover:scale-105 duration-300 ease-out">
+          <div className="md:w-[37%] bg-[#faf8f0] rounded-xl py-4 px-6 hover:scale-105 duration-300 ease-out">
             <h2 className="text-2xl font-semibold mb-4">
               Recognition and Exposure
             </h2>
@@ -171,7 +175,7 @@ const AboutUs = () => {
             </ul>
           </div>
 
-          <div className="w-[37%] bg-[#faf8f0] rounded-xl py-4 px-6 hover:scale-105 duration-300 ease-out">
+          <div className="md:w-[37%] bg-[#faf8f0] rounded-xl py-4 px-6 hover:scale-105 duration-300 ease-out">
             <h2 className="text-2xl font-semibold mb-4">
               Supportive Community
             </h2>

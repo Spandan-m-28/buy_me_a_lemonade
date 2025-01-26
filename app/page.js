@@ -29,11 +29,11 @@ export default function Home() {
       <Navbar />
       <div>
         <div className="min-h-[70vh] flex flex-col justify-center items-center">
-          <h1 className="lexend-deca-text text-8xl font-medium flex flex-col justify-center items-center top">
-            <span>Fund your </span>
+          <h1 className="lexend-deca-text text-5xl md:text-8xl font-medium flex flex-col justify-center items-center top">
+            <span >Fund your </span>
             <span>creative work</span>
           </h1>
-          <h3 className="mt-3 text-xl">
+          <h3 className="mt-3 text-lg md:text-xl w-[80%] text-center">
             "Start your own landing page and and raise funds for free"
           </h3>
           <div className="flex flex-col justify-center items-center">
@@ -50,16 +50,16 @@ export default function Home() {
         <div className="w-full mx-auto">
           <div className="flex flex-col w-3/4 mt-7 rounded-3xl mx-auto">
             <div className="flex flex-col justify-center items-center">
-              <h2 className="text-6xl font-medium lexend-deca-text">
+              <h2 className="text-5xl md:text-6xl font-medium lexend-deca-text text-center">
                 Designed for creators,
               </h2>
-              <h2 className="text-6xl font-medium lexend-deca-text text-gray-800 mt-2">
+              <h2 className=" text-center text-5xl md:text-6xl font-medium lexend-deca-text text-gray-800 mt-2">
                 not for businesses.
               </h2>
             </div>
             <div className="flex flex-wrap justify-center item-center mt-3 gap-5 mb-9">
-              <div className="w-[35%] p-6 gap-8 bg-[#faf8f0] flex mt-5 mx-5 rounded-xl text-xl justify-center items-center hover:scale-105 cursor-pointer hover:ease-out duration-300">
-                <span className="font-bold">
+              <div className="md:w-[35%] p-6 gap-8 bg-[#faf8f0] flex mt-5 mx-5 rounded-xl text-xl justify-center items-center hover:scale-105 cursor-pointer hover:ease-out duration-300">
+                <span className=" hidden md:block font-bold">
                   <lord-icon
                     src="https://cdn.lordicon.com/hmzvkifi.json"
                     trigger="hover"
@@ -71,8 +71,8 @@ export default function Home() {
                   supporters.
                 </p>
               </div>
-              <div className="w-[35%] p-6 gap-8 bg-[#faf8f0] flex mt-5 mx-5 rounded-xl text-xl justify-center items-center hover:scale-105 cursor-pointer hover:ease-out duration-300">
-                <span className="font-bold">
+              <div className="md:w-[35%] p-6 gap-8 bg-[#faf8f0] flex mt-5 mx-5 rounded-xl text-xl justify-center items-center hover:scale-105 cursor-pointer hover:ease-out duration-300">
+                <span className="hidden md:block font-bold">
                   <lord-icon
                     src="https://cdn.lordicon.com/hmzvkifi.json"
                     trigger="hover"
@@ -84,8 +84,8 @@ export default function Home() {
                   them, and you can export the list any time you like.
                 </p>
               </div>
-              <div className="w-[35%] p-6 gap-8 bg-[#faf8f0] flex mt-5 mx-5 rounded-xl text-xl justify-center items-center hover:scale-105 cursor-pointer hover:ease-out duration-300">
-                <span className="font-bold">
+              <div className="md:w-[35%] p-6 gap-8 bg-[#faf8f0] flex mt-5 mx-5 rounded-xl text-xl justify-center items-center hover:scale-105 cursor-pointer hover:ease-out duration-300">
+                <span className="hidden md:block font-bold">
                   <lord-icon
                     src="https://cdn.lordicon.com/hmzvkifi.json"
                     trigger="hover"
@@ -97,8 +97,8 @@ export default function Home() {
                   advice to hit the ground running.
                 </p>
               </div>
-              <div className="w-[35%] p-6 gap-8 bg-[#faf8f0] flex mt-5 mx-5 rounded-xl text-xl justify-center items-center hover:scale-105 cursor-pointer hover:ease-out duration-300">
-                <span>
+              <div className="md:w-[35%] p-6 gap-8 bg-[#faf8f0] flex mt-5 mx-5 rounded-xl text-xl justify-center items-center hover:scale-105 cursor-pointer hover:ease-out duration-300">
+                <span className="hidden md:block font-bold">
                   <lord-icon
                     src="https://cdn.lordicon.com/hmzvkifi.json"
                     trigger="hover"

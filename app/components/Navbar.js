@@ -13,13 +13,13 @@ const Navbar = () => {
   }
 
   return (
-    <nav className="lexend-deca-text flex justify-between items-center max-h-20">
-      <div className="first mx-10 text-lg hover:underline-offset-0">
+    <nav className="lexend-deca-text flex justify-between gap-8 items-center max-h-20 mx-auto py-4 md:px-10">
+      <div className="first ml-7 md:mx-10 text-lg hover:underline-offset-0">
         <p className="hover:underline hover:underline-offset-8 decoration-2 cursor-pointer">
           <Link href={"/AboutUs/"}>About Us</Link>
         </p>
       </div>
-      <div className="second flex justify-center items-center gap-6 cursor-pointer">
+      <div className="second mr-6 md:mr-0 flex justify-center items-center gap-6 cursor-pointer">
         <div>
           <Link href={"/"}>
             <svg
@@ -87,27 +87,27 @@ const Navbar = () => {
             </svg>
           </Link>
         </div>
-        <div className="playwrite-au-sa-logo text-xl">
+        <div className=" playwrite-au-sa-logo text-xl hidden md:block">
           <Link href={"/"}>Buy Me a Lemonade</Link>
         </div>
       </div>
-      <div className="third mr-10 flex gap-6">
+      <div className="third mr-10 flex gap-6 ">
       {isSignedIn ? (
         // User is signed in: Display a welcome message or other signed-in content
         <>
           <UserButton/>
-          <p>{ user?.firstName }</p>
+          <p className="hidden md:block">{ user?.firstName }</p>
         </>
       ) : (
         // User is not signed in: Show Login and Sign Up buttons
         <>
           <Link href="/CreateAccount">
-            <button className="hover:bg-[#f3f3f1] hover:ease-out duration-300 py-3 rounded-3xl px-4">
+            <button className="hover:bg-[#f3f3f1] hover:ease-out duration-300 py-3 rounded-3xl md:px-4">
               Login
             </button>
           </Link>
           <Link href="/CreateAccount">
-            <button className="bg-[#ffdd00] py-3 rounded-3xl px-4">Sign Up</button>
+            <button className="bg-[#ffdd00] hidden md:block py-3 rounded-3xl px-4">Sign Up</button>
           </Link>
         </>
       )}

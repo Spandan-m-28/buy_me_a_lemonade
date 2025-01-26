@@ -4,7 +4,7 @@ import Link from "next/link";
 const Footer = () => {
   return (
     <footer className="bg-[#faf8f0]">
-      <div className="flex text-9xl playwrite-au-sa-logo justify-start items-center gap-10">
+      <div className="flex text-4xl md:text-9xl playwrite-au-sa-logo justify-start items-center gap-10">
         <p>Lemonade</p>
         <svg
           width="134"
@@ -73,8 +73,8 @@ const Footer = () => {
       </div>
       <div className="rounded-lg flex w-3/4 mx-auto justify-between px-6 mt-6 items-center">
         <div className="flex flex-col justify-center items-center gap-4 mx-auto">
-          <div className="text-xl font-medium">Contact Us</div>
-          <div className="flex justify-center items-center gap-10">
+          <div className="text-xl font-medium text-center mx-auto">Contact Us</div>
+          <div className="flex justify-center items-center gap-10 mx-auto">
             <span className="cursor-pointer">
               <Link href="https://x.com/spandan_m_28">
                 <lord-icon

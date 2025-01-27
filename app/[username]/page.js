@@ -93,7 +93,7 @@ const page = ({ params: paramsPromise }) => {
       const { order } = data;
 
       var options = {
-        key: process.env.NEXT_PUBLIC_KEY_ID, // Use NEXT_PUBLIC for client-side environment variables
+        key: user.razorpayId, // Use NEXT_PUBLIC for client-side environment variables
         amount: order.amount,
         currency: order.currency,
         name: "Buy Me a Lemonade",

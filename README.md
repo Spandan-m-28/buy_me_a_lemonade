@@ -1,36 +1,66 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+<h1>Buy Me a Lemonade</h1>
+<p>A web application where users can support creators by making payments. The application uses Next.js for the frontend, Razorpay for payment handling, Mongoose for MongoDB integration, and Clerk for user authentication.</p>
 
-## Getting Started
+<h2>Table of Contents</h2>
+<ul>
+    <li><a href="#tech-stack">Tech Stack</a></li>
+    <li><a href="#installation">Installation</a></li>
+    <li><a href="#development">Development</a></li>
+    <li><a href="#scripts">Scripts</a></li>
+    <li><a href="#dependencies">Dependencies</a></li>
+    <li><a href="#license">License</a></li>
+</ul>
 
-First, run the development server:
+<h2 id="tech-stack">Tech Stack</h2>
+<ul>
+    <li><strong>Next.js</strong>: React framework for building server-rendered applications.</li>
+    <li><strong>React</strong>: JavaScript library for building user interfaces.</li>
+    <li><strong>Razorpay</strong>: Payment gateway for handling transactions.</li>
+    <li><strong>Mongoose</strong>: ODM for MongoDB.</li>
+    <li><strong>Clerk</strong>: User authentication and management.</li>
+    <li><strong>Tailwind CSS</strong>: Utility-first CSS framework for styling.</li>
+    <li><strong>ESLint</strong>: Linting tool to ensure consistent code quality.</li>
+</ul>
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+<h2 id="installation">Installation</h2>
+<p>To get started with this project, clone the repository and install the dependencies:</p>
+<pre><code>git clone https://github.com/your-username/buy_me_a_lemonade.git
+cd buy_me_a_lemonade
+npm install</code></pre>
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+<h2 id="development">Development</h2>
+<p>To run the application in development mode with Turbopack enabled, use the following command:</p>
+<pre><code>npm run dev</code></pre>
+<p>This will start the Next.js development server at <a href="http://localhost:3000">http://localhost:3000</a>.</p>
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+<h2 id="scripts">Scripts</h2>
+<ul>
+    <li><strong>dev</strong>: Starts the development server with Turbopack.</li>
+    <li><strong>build</strong>: Builds the application for production.</li>
+    <li><strong>start</strong>: Starts the production server after building.</li>
+    <li><strong>lint</strong>: Runs the linter to ensure code quality.</li>
+</ul>
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+<h2 id="dependencies">Dependencies</h2>
+<p>This project uses the following dependencies:</p>
+<ul>
+    <li><strong>@clerk/nextjs</strong>: Provides authentication functionality.</li>
+    <li><strong>mongoose</strong>: ODM for MongoDB.</li>
+    <li><strong>next</strong>: Framework for building React applications.</li>
+    <li><strong>razorpay</strong>: Payment gateway library.</li>
+    <li><strong>react</strong>: JavaScript library for building UI components.</li>
+    <li><strong>react-dom</strong>: Provides the DOM rendering functionality for React.</li>
+</ul>
 
-## Learn More
+<h2 id="dev-dependencies">Dev Dependencies</h2>
+<p>This project uses the following development dependencies:</p>
+<ul>
+    <li><strong>@eslint/eslintrc</strong>: Configuration for ESLint.</li>
+    <li><strong>eslint</strong>: Linting tool for JavaScript.</li>
+    <li><strong>eslint-config-next</strong>: ESLint configuration for Next.js.</li>
+    <li><strong>postcss</strong>: Tool for transforming CSS.</li>
+    <li><strong>tailwindcss</strong>: Utility-first CSS framework.</li>
+</ul>
 
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+<h2 id="license">Created By</h2>
+<p>Spandan Meshram</p>

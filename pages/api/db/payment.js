@@ -9,11 +9,6 @@ export const initiatePayment = async (amount, to_username, paymentform) => {
     // Connect to the database
     await dbConnect();
 
-    // Log the input data for debugging
-    console.log("Initiating payment with the following details:");
-    console.log("Amount:", amount);
-    console.log("To Username:", to_username);
-    console.log("Payment Form:", paymentform);
 
     // Validate the required fields
     if (!amount || isNaN(amount) || amount <= 0) {
@@ -33,8 +28,6 @@ export const initiatePayment = async (amount, to_username, paymentform) => {
     });
 
     // Log Razorpay keys to ensure they're loaded
-    console.log("Razorpay Key ID:", process.env.KEY_ID);
-    console.log("Razorpay Key Secret is loaded:", !!process.env.KEY_SECRET);
 
     // Create a new Razorpay order
     const options = {
@@ -43,11 +36,9 @@ export const initiatePayment = async (amount, to_username, paymentform) => {
       receipt: `receipt_${Date.now()}`, // Unique receipt ID
     };
 
-    console.log("Creating Razorpay order with options:", options);
 
     const order = await instance.orders.create(options);
 
-    console.log("Razorpay order created successfully:", order);
 
     // Save the payment details to the database
     const payment = await Payment.create({
@@ -58,7 +49,6 @@ export const initiatePayment = async (amount, to_username, paymentform) => {
       message: paymentform.message,
     });
 
-    console.log("Payment details saved to database:", payment);
 
     // Return the Razorpay order details
     return { success: true, order };

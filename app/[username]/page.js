@@ -70,9 +70,7 @@ const page = ({ params: paramsPromise }) => {
   };
 
   const pay = async (amount) => {
-    console.log(paymentform);
     try {
-      // Call the server-side API to create a payment
       const response = await fetch("/api/db/initiatePayment", {
         method: "POST",
         headers: {
@@ -80,7 +78,7 @@ const page = ({ params: paramsPromise }) => {
         },
         body: JSON.stringify({
           amount,
-          to_username: "Spandan", // Replace with the actual username
+          to_username: params.username, // Dynamically set the recipient username
           paymentform,
         }),
       });
@@ -102,11 +100,11 @@ const page = ({ params: paramsPromise }) => {
         description: "Support your favorite creator",
         image: "https://example.com/your_logo",
         order_id: order.id,
-        callback_url: "https://localhost:3000/api/razorpay",
+        callback_url: "/api/razorpay", // Correct callback URL
         prefill: {
           name: paymentform.name,
-          email: "example@example.com", // Replace with actual email
-          contact: "9000090000", // Replace with actual contact number
+          email: "meshramspandan3@gmail.com",
+          contact: "7249423213",
         },
         notes: {
           address: "Razorpay Corporate Office",
@@ -151,18 +149,17 @@ const page = ({ params: paramsPromise }) => {
           <div className=" mx-auto leaderboard w-[90%] md:w-[49%] bg-[#faf8f0] rounded-3xl drop-shadow-2xl p-3">
             <div className="text-2xl ml-6 mt-5">Your Suppoters</div>
             <div className="flex flex-col overflow-scroll justify-center items-center ">
-              {payments.map((payment) => {
-                return (<div key={payment.order_id} className="suppoter cursor-pointer w-96 bg-white rounded-lg flex justify-center gap-10 items-center mt-5">
-                  {/* <span>
-                    <lord-icon
-                      src={"https://cdn.lordicon.com/kdduutaw.json"}
-                      trigger="hover"
-                      style={{ width: "50px", height: "50px" }}
-                    ></lord-icon>
-                  </span> */}
-                  <div className="text-lg">{`${payment.name} Gave you ${payment.amount}`}</div>
-                </div>)
-              })}
+              {payments
+                .sort((a, b) => b.amount - a.amount)
+                .slice(0, 10)
+                .map((payment, index) => (
+                  <div
+                    key={index}
+                    className="suppoter cursor-pointer w-96 bg-white rounded-lg flex justify-center gap-10 items-center mt-5"
+                  >
+                    <div className="text-lg">{`${payment.name} Gave you ${payment.amount} and said "${payment.message}"`}</div>
+                  </div>
+                ))}
             </div>
           </div>
           <div className="payment rounded-3xl w-[90%] mx-auto md:w-[49%] bg-[#faf8f0] drop-shadow-2xl p-3">

@@ -5,7 +5,6 @@ import User from "@/models/user";
 export default async function handler(req, res) {
   if (req.method === "POST") {
     try {
-      console.log("Received request to sync user with MongoDB");
 
       // Connect to the database
       await dbConnect();
@@ -27,10 +26,8 @@ export default async function handler(req, res) {
       );
 
       const clerkData = await clerkResponse.json();
-      console.log("Clerk API Response Data:", clerkData); // Log the entire response
 
       if (!clerkResponse.ok) {
-        console.log("Failed to fetch user from Clerk:", clerkData);
         return res.status(500).json({ error: "Failed to fetch user from Clerk." });
       }
 
@@ -38,7 +35,6 @@ export default async function handler(req, res) {
       const emailAddresses = clerkData?.email_addresses;
 
       if (!emailAddresses || emailAddresses.length === 0) {
-        console.log("User email is missing.");
         return res.status(400).json({ error: "User email is missing." });
       }
 
@@ -53,11 +49,9 @@ export default async function handler(req, res) {
         // If the user doesn't exist, create a new one
         user = new User({ email, name });
         await user.save();
-        console.log("User created in MongoDB:", user);
         return res.status(201).json({ message: "User created", user });
       }
 
-      console.log("User already exists in MongoDB:", user);
       return res.status(200).json({ message: "User already exists", user });
     } catch (error) {
       console.error("Error during login process:", error);

@@ -1,9 +1,11 @@
 "use client";
 
 import React, { useState } from "react";
+import { useRouter } from "next/navigation"; // Import useRouter
 import Navbar from "./Navbar";
 
 const Page = () => {
+  const router = useRouter(); // Initialize router
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -57,15 +59,10 @@ const Page = () => {
         setSuccess("User updated successfully!");
         console.log("User updated successfully:", result.data);
 
-        setFormData({
-          name: "",
-          email: "",
-          username: "",
-          profilePic: "",
-          coverPic: "",
-          razorpayId: "",
-          razorpaySecret: "",
-        });
+        
+
+        // Redirect to the dashboard after successful account creation
+        router.push(`/${formData.username}`); // Update this path as per your app's routing
       } else {
         const errorData = await response.json();
         setError(errorData.message || "Failed to update user.");
@@ -82,7 +79,7 @@ const Page = () => {
   return (
     <>
       <Navbar username={formData.username} />
-      <div className=" h-[100%] md:h-[50vh] w-screen flex bg-white">
+      <div className="h-[100%] md:h-[50vh] w-screen flex bg-white">
         <span className="hidden md:block">
           <div className="w-[30vw] h-[91vh] bg-white flex justify-center items-center">
             <img src="/lemonade_logo.svg" width={400} height={400} alt="Logo" />

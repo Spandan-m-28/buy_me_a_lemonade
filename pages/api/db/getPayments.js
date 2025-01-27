@@ -15,7 +15,7 @@ export default async function handler(req, res) {
       }
 
       // Fetch payments with `to_user` matching
-      const payments = await Payment.find({ to_user });
+      const payments = await Payment.find({ to_user, done: true });
 
       // If no payments are found
       if (payments.length === 0) {

@@ -31,6 +31,7 @@ export const POST = async (req) => {
       return NextResponse.json({ success: false, message: "Payment update failed" });
     }
 
+    // Redirect to the dashboard or desired page
     const redirectUrl = `${process.env.NEXT_PUBLIC_URL}/${updatedPayment.to_user}?paymentdone=true`;
     return NextResponse.redirect(redirectUrl);
   } else {
